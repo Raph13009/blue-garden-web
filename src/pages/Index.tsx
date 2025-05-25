@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import Mission from "@/components/Mission";
 import Activities from "@/components/Activities";
 import CourseDesHeros from "@/components/CourseDesHeros";
-import Participate from "@/components/Participate";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,7 +14,6 @@ const Index = () => {
       <Mission />
       <Activities />
       <CourseDesHeros />
-      <Participate />
       <Footer />
     </div>
   );

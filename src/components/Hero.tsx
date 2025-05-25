@@ -1,8 +1,12 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { useState } from "react";
+import { ContactDialog } from "@/components/ContactDialog";
 
 const Hero = () => {
+  const [showContactDialog, setShowContactDialog] = useState(false);
+
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-yellow-50">
       {/* Background Images */}
@@ -34,11 +38,11 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo Section */}
           <div className="mb-8 animate-fade-in">
-            <div className="inline-flex items-center justify-center w-24 h-24 bg-primary rounded-3xl mb-6 shadow-xl animate-bounce-gentle">
+            <div className="inline-flex items-center justify-center mb-6">
               <img
                 src="/lovable-uploads/20b78b86-fb22-45fa-87a9-d65495fc01cd.png"
                 alt="Blue-Garden"
-                className="w-16 h-16 rounded-2xl"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-3xl shadow-2xl animate-bounce-gentle"
               />
             </div>
           </div>
@@ -70,8 +74,9 @@ const Hero = () => {
             <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 text-white font-dm-sans font-medium rounded-2xl px-8 py-4 text-lg tracking-tight leading-relaxed shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              onClick={() => setShowContactDialog(true)}
             >
-              Faire un don ❤️
+              Nous contacter ❤️
             </Button>
           </div>
 
@@ -81,6 +86,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      <ContactDialog open={showContactDialog} onOpenChange={setShowContactDialog} />
     </section>
   );
 };

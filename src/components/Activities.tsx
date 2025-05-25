@@ -2,44 +2,51 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Users } from "lucide-react";
+import { useState } from "react";
+import { ContactDialog } from "@/components/ContactDialog";
 
 const Activities = () => {
+  const [showContactDialog, setShowContactDialog] = useState(false);
+
   const featuredEvent = {
-    title: "Grand Vide-Greniers",
-    date: "JEU. 08 MAI 2025",
-    location: "QUARTIER DU LONDEAU - rues A. RIMBAUD & P. VERLAINE",
-    description: "Venez chiner, découvrir des trésors, et profiter d'une ambiance festive! 🎪",
+    title: "Course des Héros",
+    date: "DIM. 15 JUIN 2025",
+    location: "Domaine de Saint-Cloud",
+    description: "Rejoignez-nous pour un événement sportif et solidaire exceptionnel! 🏃‍♀️",
     features: [
-      "Restauration sur place 🍽️",
-      "Ateliers et animations pour petits et grands 🎨",
+      "Parcours adaptés à tous les niveaux 🏃‍♂️",
+      "Ambiance festive et solidaire 🎉",
+      "Mobilisation pour nos causes 💪",
     ],
     contact: "INSCRIPTION AU 06.27.99.75.64",
-    image: "/lovable-uploads/59aeddf5-7fc3-4fc0-99ed-b822bbf7b4e9.png",
-    highlight: "NE MANQUEZ PAS L'ÉVÉNEMENT INCONTOURNABLE DU PRINTEMPS 🌸",
+    image: "/lovable-uploads/c4e0b46f-5575-4267-866c-a185fdd9ca38.png",
+    highlight: "ÉVÉNEMENT SPORTIF ET SOLIDAIRE À NE PAS MANQUER 🌟",
   };
 
   const pastActivities = [
     {
-      title: "Course des Héros 2024",
-      date: "15 juin 2024",
-      location: "Domaine de Saint-Cloud",
-      participants: "250+ participants",
-      image: "/lovable-uploads/c4e0b46f-5575-4267-866c-a185fdd9ca38.png",
-      description: "Un événement sportif et solidaire qui a mobilisé toute la communauté Blue-Garden.",
+      title: "Collecte de Noël à l'hôpital",
+      date: "Décembre 2025",
+      location: "Hôpital local",
+      participants: "150+ enfants soutenus",
+      image: "/lovable-uploads/01ce561e-714b-49a7-a482-3094bcb6072c.png",
+      description: "Distribution de cadeaux et moments de joie partagés avec les enfants hospitalisés.",
     },
     {
-      title: "Collecte de Noël",
-      date: "Décembre 2024",
-      location: "Paris & Banlieue",
-      participants: "500+ familles aidées",
-      description: "Distribution de cadeaux et repas pour les familles en difficulté.",
+      title: "Remise de diplômes",
+      date: "14 mai 2025",
+      location: "Noisy-le-Sec",
+      participants: "30+ enfants diplômés",
+      image: "/lovable-uploads/79f60690-56cb-40f2-8fb9-9531007589b1.png",
+      description: "Cérémonie de graduation pour célébrer les réussites scolaires des enfants.",
     },
     {
-      title: "Mission Afrique",
-      date: "Septembre 2024",
-      location: "Sénégal",
-      participants: "100+ enfants aidés",
-      description: "Construction d'une école et distribution de fournitures scolaires.",
+      title: "Journée des Jeux Multiculturels",
+      date: "31 mai 2025",
+      location: "Noisy-le-Sec",
+      participants: "200+ participants",
+      image: "/lovable-uploads/096755a3-825b-4126-ab92-a00a455a274f.png",
+      description: "Découverte et partage de jeux traditionnels de différentes cultures.",
     },
   ];
 
@@ -57,7 +64,7 @@ const Activities = () => {
             </p>
           </div>
 
-          {/* Featured Event - Grand Vide-Greniers */}
+          {/* Featured Event - Course des Héros */}
           <div className="mb-16">
             <Card className="overflow-hidden rounded-3xl shadow-2xl border-0 bg-gradient-to-br from-purple-500 to-pink-500 text-white">
               <CardContent className="p-0">
@@ -113,14 +120,12 @@ const Activities = () => {
                       <p className="font-dm-sans font-medium tracking-tight leading-relaxed">
                         📞 {featuredEvent.contact}
                       </p>
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <Button className="bg-secondary hover:bg-secondary/90 text-gray-900 font-dm-sans font-medium rounded-2xl px-6 py-3 tracking-tight leading-relaxed">
-                          S'inscrire maintenant 📝
-                        </Button>
-                        <Button variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 font-dm-sans font-medium rounded-2xl px-6 py-3 tracking-tight leading-relaxed">
-                          Plus d'infos ℹ️
-                        </Button>
-                      </div>
+                      <Button 
+                        className="bg-secondary hover:bg-secondary/90 text-gray-900 font-dm-sans font-medium rounded-2xl px-6 py-3 tracking-tight leading-relaxed"
+                        onClick={() => setShowContactDialog(true)}
+                      >
+                        Nous contacter 📞
+                      </Button>
                     </div>
                   </div>
 
@@ -151,7 +156,7 @@ const Activities = () => {
                   className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg rounded-2xl overflow-hidden"
                 >
                   {activity.image && (
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-40 overflow-hidden">
                       <img
                         src={activity.image}
                         alt={activity.title}
@@ -194,23 +199,9 @@ const Activities = () => {
               ))}
             </div>
           </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-16">
-            <div className="bg-white rounded-3xl p-8 shadow-xl">
-              <h3 className="font-dm-sans font-bold text-2xl text-gray-900 mb-4 tracking-tight leading-relaxed">
-                Rejoignez nos prochains événements ! 🌟
-              </h3>
-              <p className="font-dm-sans text-gray-600 mb-6 tracking-tight leading-relaxed">
-                Inscrivez-vous à notre newsletter pour être informé de toutes nos activités.
-              </p>
-              <Button className="bg-primary hover:bg-primary/90 text-white font-dm-sans font-medium rounded-2xl px-8 py-3 tracking-tight leading-relaxed">
-                S'abonner aux actualités 📧
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
+      <ContactDialog open={showContactDialog} onOpenChange={setShowContactDialog} />
     </section>
   );
 };
