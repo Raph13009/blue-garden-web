@@ -25,9 +25,6 @@ const Header = () => {
               <h1 className="font-dm-sans font-bold text-xl text-gray-900 tracking-tight leading-relaxed">
                 Blue-Garden
               </h1>
-              <p className="font-dm-sans text-sm text-gray-600 tracking-tight">
-                Association
-              </p>
             </div>
           </div>
 
