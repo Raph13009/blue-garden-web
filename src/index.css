@@ -130,3 +130,22 @@
     transform: translateY(0);
   }
 }
+
+/* Cloud animations */
+@keyframes cloud-float-left {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 200px));
+  }
+}
+
+@keyframes cloud-float-right {
+  0% {
+    transform: translateX(calc(100vw + 200px));
+  }
+  100% {
+    transform: translateX(-200px);
+  }
+}

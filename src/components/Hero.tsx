@@ -25,7 +25,13 @@ const Hero = () => {
       {/* Animated Clouds */}
       <div className="absolute inset-0 z-0">
         {/* Cloud 1 - Moving from left to right */}
-        <div className="absolute top-20 opacity-40 animate-[slide-in-right_25s_linear_infinite]" style={{ left: '-200px' }}>
+        <div 
+          className="absolute top-20 opacity-60"
+          style={{ 
+            animation: 'cloud-float-left 20s linear infinite',
+            animationDelay: '0s'
+          }}
+        >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
@@ -34,7 +40,13 @@ const Hero = () => {
         </div>
         
         {/* Cloud 2 - Moving from right to left */}
-        <div className="absolute top-40 right-0 opacity-35 animate-[slide-out-right_30s_linear_infinite_reverse]" style={{ right: '-200px' }}>
+        <div 
+          className="absolute top-40 opacity-50"
+          style={{ 
+            animation: 'cloud-float-right 25s linear infinite',
+            animationDelay: '0s'
+          }}
+        >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
@@ -42,8 +54,14 @@ const Hero = () => {
           />
         </div>
         
-        {/* Cloud 3 - Smaller, moving from left to right */}
-        <div className="absolute top-60 opacity-30 animate-[slide-in-right_35s_linear_infinite]" style={{ left: '-150px', animationDelay: '12s' }}>
+        {/* Cloud 3 - Moving from left to right */}
+        <div 
+          className="absolute top-60 opacity-45"
+          style={{ 
+            animation: 'cloud-float-left 30s linear infinite',
+            animationDelay: '10s'
+          }}
+        >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
@@ -51,8 +69,14 @@ const Hero = () => {
           />
         </div>
         
-        {/* Cloud 4 - Moving from right to left, higher position */}
-        <div className="absolute top-80 right-0 opacity-25 animate-[slide-out-right_28s_linear_infinite_reverse]" style={{ right: '-180px', animationDelay: '8s' }}>
+        {/* Cloud 4 - Moving from right to left */}
+        <div 
+          className="absolute top-80 opacity-40"
+          style={{ 
+            animation: 'cloud-float-right 28s linear infinite',
+            animationDelay: '8s'
+          }}
+        >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
@@ -60,8 +84,14 @@ const Hero = () => {
           />
         </div>
         
-        {/* Cloud 5 - Bottom cloud moving left to right */}
-        <div className="absolute bottom-32 opacity-35 animate-[slide-in-right_32s_linear_infinite]" style={{ left: '-200px', animationDelay: '18s' }}>
+        {/* Cloud 5 - Moving from left to right */}
+        <div 
+          className="absolute bottom-32 opacity-55"
+          style={{ 
+            animation: 'cloud-float-left 22s linear infinite',
+            animationDelay: '15s'
+          }}
+        >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
@@ -69,8 +99,14 @@ const Hero = () => {
           />
         </div>
         
-        {/* Cloud 6 - Small cloud, right to left */}
-        <div className="absolute bottom-40 right-0 opacity-30 animate-[slide-out-right_40s_linear_infinite_reverse]" style={{ right: '-160px', animationDelay: '25s' }}>
+        {/* Cloud 6 - Moving from right to left */}
+        <div 
+          className="absolute bottom-40 opacity-35"
+          style={{ 
+            animation: 'cloud-float-right 35s linear infinite',
+            animationDelay: '20s'
+          }}
+        >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
@@ -78,8 +114,14 @@ const Hero = () => {
           />
         </div>
 
-        {/* Cloud 7 - Medium cloud, left to right, top */}
-        <div className="absolute top-10 opacity-25 animate-[slide-in-right_38s_linear_infinite]" style={{ left: '-180px', animationDelay: '5s' }}>
+        {/* Cloud 7 - Moving from left to right */}
+        <div 
+          className="absolute top-10 opacity-30"
+          style={{ 
+            animation: 'cloud-float-left 32s linear infinite',
+            animationDelay: '5s'
+          }}
+        >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
@@ -87,12 +129,48 @@ const Hero = () => {
           />
         </div>
 
-        {/* Cloud 8 - Large cloud, right to left, middle */}
-        <div className="absolute top-72 right-0 opacity-20 animate-[slide-out-right_45s_linear_infinite_reverse]" style={{ right: '-220px', animationDelay: '15s' }}>
+        {/* Cloud 8 - Moving from right to left */}
+        <div 
+          className="absolute top-72 opacity-25"
+          style={{ 
+            animation: 'cloud-float-right 40s linear infinite',
+            animationDelay: '25s'
+          }}
+        >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
             className="w-44 h-33 object-contain transform scale-x-[-1]"
+          />
+        </div>
+
+        {/* Cloud 9 - Additional cloud for more movement */}
+        <div 
+          className="absolute top-96 opacity-40"
+          style={{ 
+            animation: 'cloud-float-left 26s linear infinite',
+            animationDelay: '12s'
+          }}
+        >
+          <img
+            src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
+            alt="Cloud"
+            className="w-26 h-19 object-contain"
+          />
+        </div>
+
+        {/* Cloud 10 - Additional cloud for more movement */}
+        <div 
+          className="absolute bottom-60 opacity-45"
+          style={{ 
+            animation: 'cloud-float-right 33s linear infinite',
+            animationDelay: '18s'
+          }}
+        >
+          <img
+            src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
+            alt="Cloud"
+            className="w-22 h-16 object-contain transform scale-x-[-1]"
           />
         </div>
       </div>
