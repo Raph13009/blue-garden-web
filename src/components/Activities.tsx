@@ -2,12 +2,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Users } from "lucide-react";
-import { useState } from "react";
-import { ContactDialog } from "@/components/ContactDialog";
 
 const Activities = () => {
-  const [showContactDialog, setShowContactDialog] = useState(false);
-
   const featuredEvent = {
     title: "Course des Héros",
     date: "DIM. 15 JUIN 2025",
@@ -18,7 +14,7 @@ const Activities = () => {
       "Ambiance festive et solidaire 🎉",
       "Mobilisation pour nos causes 💪",
     ],
-    contact: "INSCRIPTION AU 06.27.99.75.64",
+    contact: "INSCRIPTION AU +33 6 27 99 75 64",
     image: "/lovable-uploads/c4e0b46f-5575-4267-866c-a185fdd9ca38.png",
     highlight: "ÉVÉNEMENT SPORTIF ET SOLIDAIRE À NE PAS MANQUER 🌟",
   };
@@ -122,9 +118,11 @@ const Activities = () => {
                       </p>
                       <Button 
                         className="bg-secondary hover:bg-secondary/90 text-gray-900 font-dm-sans font-medium rounded-2xl px-6 py-3 tracking-tight leading-relaxed"
-                        onClick={() => setShowContactDialog(true)}
+                        asChild
                       >
-                        Nous contacter 📞
+                        <a href="mailto:blue-garden@outlook.fr">
+                          Nous contacter 📞
+                        </a>
                       </Button>
                     </div>
                   </div>
@@ -201,7 +199,6 @@ const Activities = () => {
           </div>
         </div>
       </div>
-      <ContactDialog open={showContactDialog} onOpenChange={setShowContactDialog} />
     </section>
   );
 };
