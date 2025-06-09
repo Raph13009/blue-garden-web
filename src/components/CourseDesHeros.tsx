@@ -1,6 +1,5 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Trophy, Heart, Users } from "lucide-react";
 
 const CourseDesHeros = () => {
@@ -138,15 +137,15 @@ const CourseDesHeros = () => {
             ))}
           </div>
 
-          {/* Registration Section */}
+          {/* Information Section */}
           <div className="text-center">
             <Card className="overflow-hidden rounded-3xl border-0 bg-gradient-to-br from-primary via-purple-600 to-accent shadow-2xl">
               <CardContent className="p-8 md:p-12 text-white">
                 <h3 className="font-dm-sans font-bold text-3xl md:text-4xl mb-6 tracking-tight leading-relaxed">
-                  Rejoindre l'équipe Blue-Garden 🏆
+                  Course des Héros 2025 🏆
                 </h3>
                 <p className="font-dm-sans text-lg md:text-xl mb-8 tracking-tight leading-relaxed opacity-90 max-w-3xl mx-auto">
-                  Participez à cet événement exceptionnel et contribuez à changer la vie de nombreuses personnes. Chaque pas compte, chaque participation fait la différence !
+                  Un événement exceptionnel pour contribuer à changer la vie de nombreuses personnes. Chaque pas compte, chaque participation fait la différence !
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-6 mb-8 text-center">
@@ -176,24 +175,8 @@ const CourseDesHeros = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    size="lg"
-                    className="bg-secondary hover:bg-secondary/90 text-gray-900 font-dm-sans font-medium rounded-2xl px-8 py-4 text-lg tracking-tight leading-relaxed shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                  >
-                    Rejoindre l'équipe Blue-Garden 🏃‍♀️
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-gray-900 font-dm-sans font-medium rounded-2xl px-8 py-4 text-lg tracking-tight leading-relaxed"
-                  >
-                    Télécharger le programme 📄
-                  </Button>
-                </div>
-
-                <p className="font-dm-sans text-sm mt-6 tracking-tight leading-relaxed opacity-80">
-                  Inscription ouverte jusqu'au 1er juin 2025 • Tarifs préférentiels jusqu'au 15 avril
+                <p className="font-dm-sans text-sm tracking-tight leading-relaxed opacity-80">
+                  Plus d'informations disponibles prochainement
                 </p>
               </CardContent>
             </Card>

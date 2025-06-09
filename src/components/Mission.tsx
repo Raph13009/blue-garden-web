@@ -89,16 +89,14 @@ const Mission = () => {
                 Ensemble, nous pouvons faire la différence ✨
               </h3>
               <p className="font-dm-sans text-lg text-gray-600 mb-6 tracking-tight leading-relaxed">
-                Chaque geste compte, chaque don permet d'offrir un sourire et un espoir.
+                Chaque geste compte, chaque action permet d'offrir un sourire et un espoir.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-primary hover:bg-primary/90 text-white font-dm-sans font-medium rounded-2xl px-8 py-3 tracking-tight leading-relaxed shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  Rejoindre notre mission 🤝
-                </button>
-                <button className="bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 font-dm-sans font-medium rounded-2xl px-8 py-3 tracking-tight leading-relaxed shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  En savoir plus 📖
-                </button>
-              </div>
+              <a
+                href="mailto:blue-garden@outlook.fr"
+                className="inline-block bg-primary hover:bg-primary/90 text-white font-dm-sans font-medium rounded-2xl px-8 py-3 tracking-tight leading-relaxed shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                Rejoindre notre mission 🤝
+              </a>
             </div>
           </div>
         </div>
