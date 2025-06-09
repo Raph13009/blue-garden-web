@@ -8,7 +8,20 @@ const Hero = () => {
   const [showContactDialog, setShowContactDialog] = useState(false);
 
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-yellow-50">
+    <section className="min-h-screen flex items-center relative overflow-hidden">
+      {/* Animated Sky Background */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-200 via-blue-100 to-purple-100 animate-pulse"></div>
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full opacity-70 animate-bounce" style={{ animationDelay: '0s', animationDuration: '6s' }}></div>
+          <div className="absolute top-32 right-20 w-16 h-16 bg-white rounded-full opacity-50 animate-bounce" style={{ animationDelay: '2s', animationDuration: '8s' }}></div>
+          <div className="absolute top-20 left-1/3 w-12 h-12 bg-white rounded-full opacity-60 animate-bounce" style={{ animationDelay: '4s', animationDuration: '10s' }}></div>
+          <div className="absolute top-40 right-1/3 w-24 h-24 bg-white rounded-full opacity-40 animate-bounce" style={{ animationDelay: '1s', animationDuration: '7s' }}></div>
+          <div className="absolute bottom-32 left-20 w-18 h-18 bg-white rounded-full opacity-60 animate-bounce" style={{ animationDelay: '3s', animationDuration: '9s' }}></div>
+          <div className="absolute bottom-20 right-10 w-14 h-14 bg-white rounded-full opacity-50 animate-bounce" style={{ animationDelay: '5s', animationDuration: '6s' }}></div>
+        </div>
+      </div>
+
       {/* Background Images */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-20 right-10 w-32 h-32 opacity-20 transform rotate-12">
@@ -25,25 +38,21 @@ const Hero = () => {
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
         </div>
-        <div className="absolute top-1/2 left-1/4 w-20 h-20 opacity-10">
-          <img
-            src="/lovable-uploads/20b78b86-fb22-45fa-87a9-d65495fc01cd.png"
-            alt="Blue-Garden Logo"
-            className="w-full h-full object-cover rounded-full"
-          />
-        </div>
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Logo Section */}
+          {/* Logo Section - Improved presentation */}
           <div className="mb-8 animate-fade-in">
             <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/lovable-uploads/20b78b86-fb22-45fa-87a9-d65495fc01cd.png"
-                alt="Blue-Garden"
-                className="w-32 h-32 md:w-40 md:h-40 rounded-3xl shadow-2xl animate-bounce-gentle"
-              />
+              <div className="relative">
+                <img
+                  src="/lovable-uploads/fedf58b1-d505-4bb2-b34a-22256430ac06.png"
+                  alt="Blue-Garden"
+                  className="w-40 h-40 md:w-48 md:h-48 object-contain drop-shadow-2xl animate-bounce-gentle"
+                  style={{ filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.15))' }}
+                />
+              </div>
             </div>
           </div>
 

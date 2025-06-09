@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram } from "lucide-react";
 import { useState } from "react";
 import { ContactDialog } from "@/components/ContactDialog";
 
@@ -19,9 +19,9 @@ const Header = () => {
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 rounded-2xl flex items-center justify-center overflow-hidden">
                 <img
-                  src="/lovable-uploads/20b78b86-fb22-45fa-87a9-d65495fc01cd.png"
+                  src="/lovable-uploads/fedf58b1-d505-4bb2-b34a-22256430ac06.png"
                   alt="Blue-Garden"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>
@@ -53,6 +53,15 @@ const Header = () => {
                 className="font-dm-sans font-medium text-gray-700 hover:text-primary transition-colors tracking-tight leading-relaxed"
               >
                 Course des Héros
+              </a>
+              <a
+                href="https://www.instagram.com/bluegardenassociation?igsh=cGlyMDF3dXBrZnph"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-dm-sans font-medium text-gray-700 hover:text-primary transition-colors tracking-tight leading-relaxed flex items-center gap-2"
+              >
+                <Instagram className="w-4 h-4" />
+                Instagram
               </a>
             </nav>
 
@@ -104,6 +113,30 @@ const Header = () => {
                 >
                   Course des Héros
                 </a>
+                
+                {/* Instagram Link with special styling */}
+                <div className="pt-2 border-t border-gray-200">
+                  <a
+                    href="https://www.instagram.com/bluegardenassociation?igsh=cGlyMDF3dXBrZnph"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl hover:from-purple-100 hover:to-pink-100 transition-all duration-300"
+                    onClick={toggleMenu}
+                  >
+                    <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center">
+                      <Instagram className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <span className="font-dm-sans font-medium text-gray-900 tracking-tight block">
+                        Suivez-nous sur Instagram
+                      </span>
+                      <span className="font-dm-sans text-sm text-gray-600 tracking-tight">
+                        @bluegardenassociation
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
                 <Button 
                   className="bg-accent hover:bg-accent/90 text-white font-dm-sans font-medium rounded-2xl px-6 py-2 tracking-tight leading-relaxed w-full mt-4"
                   onClick={() => {

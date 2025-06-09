@@ -69,6 +69,25 @@ const Footer = () => {
                   </span>
                 </div>
               </div>
+
+              {/* Instagram CTA */}
+              <div className="mt-6 p-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl">
+                <div className="flex items-center gap-3 mb-3">
+                  <Instagram className="w-5 h-5 text-white" />
+                  <span className="font-dm-sans font-medium text-white text-sm tracking-tight">
+                    Suivez notre quotidien !
+                  </span>
+                </div>
+                <a
+                  href="https://www.instagram.com/bluegardenassociation?igsh=cGlyMDF3dXBrZnph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-white text-gray-900 font-dm-sans font-medium rounded-xl px-4 py-2 text-sm tracking-tight hover:bg-gray-100 transition-colors"
+                >
+                  <Instagram className="w-4 h-4" />
+                  @bluegardenassociation
+                </a>
+              </div>
             </div>
 
             {/* Quick Links */}
@@ -154,8 +173,10 @@ const Footer = () => {
                     <Facebook className="w-4 h-4" />
                   </a>
                   <a
-                    href="#"
-                    className="w-10 h-10 bg-gray-800 rounded-2xl flex items-center justify-center hover:bg-primary transition-colors"
+                    href="https://www.instagram.com/bluegardenassociation?igsh=cGlyMDF3dXBrZnph"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-110"
                   >
                     <Instagram className="w-4 h-4" />
                   </a>
