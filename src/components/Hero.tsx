@@ -9,33 +9,72 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Animated Sky Background */}
+      {/* Animated Sky Background - Made softer */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-200 via-blue-100 to-purple-100 animate-pulse"></div>
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full opacity-70 animate-bounce" style={{ animationDelay: '0s', animationDuration: '6s' }}></div>
-          <div className="absolute top-32 right-20 w-16 h-16 bg-white rounded-full opacity-50 animate-bounce" style={{ animationDelay: '2s', animationDuration: '8s' }}></div>
-          <div className="absolute top-20 left-1/3 w-12 h-12 bg-white rounded-full opacity-60 animate-bounce" style={{ animationDelay: '4s', animationDuration: '10s' }}></div>
-          <div className="absolute top-40 right-1/3 w-24 h-24 bg-white rounded-full opacity-40 animate-bounce" style={{ animationDelay: '1s', animationDuration: '7s' }}></div>
-          <div className="absolute bottom-32 left-20 w-18 h-18 bg-white rounded-full opacity-60 animate-bounce" style={{ animationDelay: '3s', animationDuration: '9s' }}></div>
-          <div className="absolute bottom-20 right-10 w-14 h-14 bg-white rounded-full opacity-50 animate-bounce" style={{ animationDelay: '5s', animationDuration: '6s' }}></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-200 via-blue-100 to-purple-100 animate-pulse" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full opacity-70 animate-bounce" style={{ animationDelay: '0s', animationDuration: '8s' }}></div>
+          <div className="absolute top-32 right-20 w-16 h-16 bg-white rounded-full opacity-50 animate-bounce" style={{ animationDelay: '3s', animationDuration: '10s' }}></div>
+          <div className="absolute top-20 left-1/3 w-12 h-12 bg-white rounded-full opacity-60 animate-bounce" style={{ animationDelay: '6s', animationDuration: '12s' }}></div>
+          <div className="absolute top-40 right-1/3 w-24 h-24 bg-white rounded-full opacity-40 animate-bounce" style={{ animationDelay: '2s', animationDuration: '9s' }}></div>
+          <div className="absolute bottom-32 left-20 w-18 h-18 bg-white rounded-full opacity-60 animate-bounce" style={{ animationDelay: '5s', animationDuration: '11s' }}></div>
+          <div className="absolute bottom-20 right-10 w-14 h-14 bg-white rounded-full opacity-50 animate-bounce" style={{ animationDelay: '7s', animationDuration: '8s' }}></div>
         </div>
       </div>
 
-      {/* Background Images */}
+      {/* Animated Clouds */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 right-10 w-32 h-32 opacity-20 transform rotate-12">
+        {/* Cloud 1 - Moving from left to right */}
+        <div className="absolute top-20 opacity-30 animate-[slide-in-right_20s_linear_infinite]" style={{ left: '-200px' }}>
           <img
-            src="/lovable-uploads/c4e0b46f-5575-4267-866c-a185fdd9ca38.png"
-            alt="Course des Héros"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            src="/lovable-uploads/2e17049d-6819-4efb-a518-c7db1a773fb8.png"
+            alt="Cloud"
+            className="w-32 h-24 object-contain"
           />
         </div>
-        <div className="absolute bottom-20 left-10 w-28 h-28 opacity-15 transform -rotate-12">
+        
+        {/* Cloud 2 - Moving from right to left */}
+        <div className="absolute top-40 right-0 opacity-25 animate-[slide-out-right_25s_linear_infinite_reverse]" style={{ right: '-200px' }}>
           <img
-            src="/lovable-uploads/59aeddf5-7fc3-4fc0-99ed-b822bbf7b4e9.png"
-            alt="Vide-Greniers"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            src="/lovable-uploads/2e17049d-6819-4efb-a518-c7db1a773fb8.png"
+            alt="Cloud"
+            className="w-40 h-30 object-contain transform scale-x-[-1]"
+          />
+        </div>
+        
+        {/* Cloud 3 - Smaller, moving from left to right */}
+        <div className="absolute top-60 opacity-20 animate-[slide-in-right_30s_linear_infinite]" style={{ left: '-150px', animationDelay: '10s' }}>
+          <img
+            src="/lovable-uploads/2e17049d-6819-4efb-a518-c7db1a773fb8.png"
+            alt="Cloud"
+            className="w-24 h-18 object-contain"
+          />
+        </div>
+        
+        {/* Cloud 4 - Moving from right to left, higher position */}
+        <div className="absolute top-80 right-0 opacity-15 animate-[slide-out-right_22s_linear_infinite_reverse]" style={{ right: '-180px', animationDelay: '5s' }}>
+          <img
+            src="/lovable-uploads/2e17049d-6819-4efb-a518-c7db1a773fb8.png"
+            alt="Cloud"
+            className="w-36 h-27 object-contain transform scale-x-[-1]"
+          />
+        </div>
+        
+        {/* Cloud 5 - Bottom cloud moving left to right */}
+        <div className="absolute bottom-32 opacity-25 animate-[slide-in-right_28s_linear_infinite]" style={{ left: '-200px', animationDelay: '15s' }}>
+          <img
+            src="/lovable-uploads/2e17049d-6819-4efb-a518-c7db1a773fb8.png"
+            alt="Cloud"
+            className="w-28 h-21 object-contain"
+          />
+        </div>
+        
+        {/* Cloud 6 - Small cloud, right to left */}
+        <div className="absolute bottom-40 right-0 opacity-20 animate-[slide-out-right_35s_linear_infinite_reverse]" style={{ right: '-160px', animationDelay: '20s' }}>
+          <img
+            src="/lovable-uploads/2e17049d-6819-4efb-a518-c7db1a773fb8.png"
+            alt="Cloud"
+            className="w-20 h-15 object-contain transform scale-x-[-1]"
           />
         </div>
       </div>
