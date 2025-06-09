@@ -22,155 +22,80 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Animated Clouds */}
+      {/* Improved Animated Clouds - All moving left to right */}
       <div className="absolute inset-0 z-0">
-        {/* Cloud 1 - Moving from left to right */}
+        {/* Cloud 1 - Slow speed */}
         <div 
-          className="absolute top-20 opacity-60"
+          className="absolute top-16 opacity-50"
           style={{ 
-            animation: 'cloud-float-left 20s linear infinite',
-            animationDelay: '0s'
+            animation: 'cloud-float-left 35s linear infinite',
+            animationDelay: '-10s'
           }}
         >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
-            className="w-32 h-24 object-contain"
+            className="w-60 h-45 object-contain"
           />
         </div>
         
-        {/* Cloud 2 - Moving from right to left */}
+        {/* Cloud 2 - Medium speed */}
         <div 
-          className="absolute top-40 opacity-50"
+          className="absolute top-32 opacity-45"
           style={{ 
-            animation: 'cloud-float-right 25s linear infinite',
-            animationDelay: '0s'
+            animation: 'cloud-float-left 28s linear infinite',
+            animationDelay: '-5s'
           }}
         >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
-            className="w-40 h-30 object-contain transform scale-x-[-1]"
+            className="w-48 h-36 object-contain"
           />
         </div>
         
-        {/* Cloud 3 - Moving from left to right */}
+        {/* Cloud 3 - Fast speed */}
         <div 
-          className="absolute top-60 opacity-45"
+          className="absolute top-56 opacity-55"
           style={{ 
-            animation: 'cloud-float-left 30s linear infinite',
-            animationDelay: '10s'
+            animation: 'cloud-float-left 22s linear infinite',
+            animationDelay: '-15s'
           }}
         >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
-            className="w-24 h-18 object-contain"
+            className="w-42 h-32 object-contain"
           />
         </div>
         
-        {/* Cloud 4 - Moving from right to left */}
+        {/* Cloud 4 - Medium-slow speed */}
         <div 
           className="absolute top-80 opacity-40"
           style={{ 
-            animation: 'cloud-float-right 28s linear infinite',
-            animationDelay: '8s'
+            animation: 'cloud-float-left 30s linear infinite',
+            animationDelay: '-20s'
           }}
         >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
-            className="w-36 h-27 object-contain transform scale-x-[-1]"
+            className="w-54 h-40 object-contain"
           />
         </div>
         
-        {/* Cloud 5 - Moving from left to right */}
-        <div 
-          className="absolute bottom-32 opacity-55"
-          style={{ 
-            animation: 'cloud-float-left 22s linear infinite',
-            animationDelay: '15s'
-          }}
-        >
-          <img
-            src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
-            alt="Cloud"
-            className="w-28 h-21 object-contain"
-          />
-        </div>
-        
-        {/* Cloud 6 - Moving from right to left */}
+        {/* Cloud 5 - Very slow speed */}
         <div 
           className="absolute bottom-40 opacity-35"
           style={{ 
-            animation: 'cloud-float-right 35s linear infinite',
-            animationDelay: '20s'
+            animation: 'cloud-float-left 40s linear infinite',
+            animationDelay: '-25s'
           }}
         >
           <img
             src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
             alt="Cloud"
-            className="w-20 h-15 object-contain transform scale-x-[-1]"
-          />
-        </div>
-
-        {/* Cloud 7 - Moving from left to right */}
-        <div 
-          className="absolute top-10 opacity-30"
-          style={{ 
-            animation: 'cloud-float-left 32s linear infinite',
-            animationDelay: '5s'
-          }}
-        >
-          <img
-            src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
-            alt="Cloud"
-            className="w-30 h-22 object-contain"
-          />
-        </div>
-
-        {/* Cloud 8 - Moving from right to left */}
-        <div 
-          className="absolute top-72 opacity-25"
-          style={{ 
-            animation: 'cloud-float-right 40s linear infinite',
-            animationDelay: '25s'
-          }}
-        >
-          <img
-            src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
-            alt="Cloud"
-            className="w-44 h-33 object-contain transform scale-x-[-1]"
-          />
-        </div>
-
-        {/* Cloud 9 - Additional cloud for more movement */}
-        <div 
-          className="absolute top-96 opacity-40"
-          style={{ 
-            animation: 'cloud-float-left 26s linear infinite',
-            animationDelay: '12s'
-          }}
-        >
-          <img
-            src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
-            alt="Cloud"
-            className="w-26 h-19 object-contain"
-          />
-        </div>
-
-        {/* Cloud 10 - Additional cloud for more movement */}
-        <div 
-          className="absolute bottom-60 opacity-45"
-          style={{ 
-            animation: 'cloud-float-right 33s linear infinite',
-            animationDelay: '18s'
-          }}
-        >
-          <img
-            src="/lovable-uploads/c1e9eaab-b8c3-47d3-be1c-1282684eb227.png"
-            alt="Cloud"
-            className="w-22 h-16 object-contain transform scale-x-[-1]"
+            className="w-66 h-50 object-contain"
           />
         </div>
       </div>

@@ -131,21 +131,12 @@
   }
 }
 
-/* Cloud animations */
+/* Optimized cloud animation - smoother and more performant */
 @keyframes cloud-float-left {
   0% {
-    transform: translateX(-200px);
+    transform: translateX(-300px);
   }
   100% {
-    transform: translateX(calc(100vw + 200px));
-  }
-}
-
-@keyframes cloud-float-right {
-  0% {
-    transform: translateX(calc(100vw + 200px));
-  }
-  100% {
-    transform: translateX(-200px);
+    transform: translateX(calc(100vw + 300px));
   }
 }
