@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -96,16 +95,16 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-20 pt-32 md:py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Logo Section - Improved presentation */}
-          <div className="mb-8 animate-fade-in">
+          {/* Logo Section - Improved presentation with mobile spacing */}
+          <div className="mb-8 mt-8 md:mt-0 animate-fade-in">
             <div className="inline-flex items-center justify-center mb-6">
               <div className="relative">
                 <img
                   src="/lovable-uploads/fedf58b1-d505-4bb2-b34a-22256430ac06.png"
                   alt="Blue-Garden"
-                  className="w-40 h-40 md:w-48 md:h-48 object-contain drop-shadow-2xl animate-bounce-gentle"
+                  className="w-32 h-32 md:w-48 md:h-48 object-contain drop-shadow-2xl animate-bounce-gentle"
                   style={{ filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.15))' }}
                 />
               </div>
